@@ -5,6 +5,7 @@ before_install:
   - sudo apt-get install nunit-console
 install:
   - nuget restore ./AssignmentDemo/AssignmentDemo.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild ./AssignmentDemo/AssignmentDemo.sln
-  - nunit-console ./AssignmentDemo/AssignmentDemo/bin/Debug/AssignmentDemoTests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AssignmentDemo/AssignmentDemo/bin/Debug/AssignmentDemoTests.dll
