@@ -4,4 +4,4 @@ install:
   - nuget restore ./AssignmentDemo/AssignmentDemo.sln
 script:
   - xbuild ./AssignmentDemo/AssignmentDemo.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AssignmentDemo/AssignmentDemo/bin/Debug/AssignmentDemoTests.dll
+  - nunit-console ./AssignmentDemo/AssignmentDemo/bin/Debug/AssignmentDemoTests.dll
