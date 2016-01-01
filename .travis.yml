@@ -1,5 +1,7 @@
 language: csharp
 solution: ./AssignmentDemo/AssignmentDemo.sln
 install:
+  - nuget restore solution-name.sln
 script:
   - xbuild ./AssignmentDemo/AssignmentDemo.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AssignmentDemo/AssignmentDemo/bin/Debug/AssignmentDemoTests.dll
