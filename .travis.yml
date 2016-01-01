@@ -1,5 +1,8 @@
 language: csharp
 solution: ./AssignmentDemo/AssignmentDemo.sln
+
+before_install:
+  - sudo apt-get install nunit-console
 install:
   - nuget restore ./AssignmentDemo/AssignmentDemo.sln
 script:
