@@ -8,4 +8,4 @@ install:
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild ./AssignmentDemo/AssignmentDemo.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AssignmentDemo/bin/Debug/AssignmentDemoTests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AssignmentDemo/AssignmentDemo/bin/Debug/AssignmentDemoTests.dll
